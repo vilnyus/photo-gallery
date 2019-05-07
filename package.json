@@ -1,0 +1,31 @@
+{
+  "name": "photo-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node ./lib/server.ts",
+    "start": "nodemon ./dist/server.js",
+    "prod": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vilnyus/photo-gallery.git"
+  },
+  "author": "me_you <vagharsh@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vilnyus/photo-gallery/issues"
+  },
+  "homepage": "https://github.com/vilnyus/photo-gallery#readme",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
+  }
+}
