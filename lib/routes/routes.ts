@@ -17,6 +17,16 @@ export class Routes {
 
         })  
 
+        app.route('/gallery')
+        .get((req: Request, res: Response) => {    
+            var files: string[] = fs.readdirSync('./public/photoalbum');      
+     
+            
+            res.render('galer', {
+                photos: files
+            });
+            console.log('Rendering gallery file');  
+        }) 
     }
 
 }

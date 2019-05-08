@@ -10,9 +10,14 @@ class Routes {
                 photos: files
             });
             console.log('Reading files');
-            // res.status(200).send({
-            //     message: 'GET request successfulll!!!!'
-            // })
+        });
+        app.route('/gallery')
+            .get((req, res) => {
+            var files = fs.readdirSync('./public/photoalbum');
+            res.render('galer', {
+                photos: files
+            });
+            console.log('Rendering gallery file');
         });
     }
 }
