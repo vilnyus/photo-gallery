@@ -14,8 +14,7 @@ export class Routes {
     public routes(app): void {      
    
         app.route('/')
-        .get((req: Request, res: Response) => {         
-            // var files: string[] = fs.readdirSync('./public/photoalbum');      
+        .get((req: Request, res: Response) => {              
 
             res.render('index', {
                 photos: this.files
@@ -35,43 +34,6 @@ export class Routes {
                     res.send(imageResized);
                   });           
             });
-
-            // res.send(this.binary); 
-
-            // im.resize({
-            //     srcData: fs.readFileSync(`./public/photoalbum/big/${req.params.resized_photo}`, 'binary'),
-            //     width:   256
-            //   }, function(err, stdout, stderr){
-            //     if (err) throw err
-            //     fs.writeFileSync(`./public/photoalbum/small/${req.params.resized_photo}`, stdout, 'binary');
-            //     console.log('resized kittens.jpg to fit within 256x256px')
-            // });
-
-            // im.readMetadata(`./public/photoalbum/big/${req.params.resized_photo}`, function(err, metadata){
-            //     if (err) throw err;
-            //     console.log('Shot at '+metadata.exif.dateTimeOriginal);
-            //     // -> Shot at Tue, 06 Feb 2007 21:13:54 GMT
-            // });
-            // im.convert([this.binary, '-resize', '25x120', 'kittens-small.jpg'], 
-            // function(err, stdout){
-            //     if (err) throw err;
-            //     console.log('stdout:', stdout);
-            // });
-
-            // lwip.open(`./public/photoalbum/big/${req.params.resized_photo}`, function(err, image) {
-                // image.rotate(33, function(err, image){
-                //     // res.send(image);
-                //     // 'image' is now rotated 33 degrees
-                // });
-                // image.resize(200, 200, function(err, image){
-                    // console.log(image);
-            //             // encode resized image to jpeg and get a Buffer object
-            //         image.toBuffer('jpg', {quality: 90}, function(err, buffer){
-            //             // Send buffer over the network, save to disk, etc.
-            //             console.log(buffer); 
-            //         });    
-                // });
-            // });
     
         })        
         
