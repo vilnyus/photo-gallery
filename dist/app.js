@@ -15,6 +15,7 @@ class App {
         this.app.set('views', 'views');
         // config static files
         this.app.use(express.static('public'));
+        // this.app.use(express.static(__dirname + '/public'));
     }
 }
 exports.default = new App().app;

@@ -19,6 +19,7 @@ class App {
 
         // config static files
         this.app.use(express.static('public'));
+        // this.app.use(express.static(__dirname + '/public'));
     }
 }
 
